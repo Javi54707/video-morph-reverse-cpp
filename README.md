@@ -39,9 +39,6 @@ g++ -std=c++11 -o reverse src/rebobinar.cpp
 ## 🎓 Academic Context
 This project was developed in 2024/25 during the “Data Structures” course in the Double Degree in Computer Engineering and Mathematics (UGR).
 
-## 🧪 Sample output
-You can include examples of the morphing effect and reversed image sequences in the output/ folder.
-
 ## 📜 License
 For academic purposes only.
 Contact: javier.ortmol@gmail.com
