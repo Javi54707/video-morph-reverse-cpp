@@ -1,0 +1,7 @@
+<map id="include/imageIO.h" name="include/imageIO.h">
+<area shape="rect" id="node1" title="Fichero cabecera para la E/S de imágenes." alt="" coords="137,5,277,32"/>
+<area shape="rect" id="node2" href="$image_8h.html" title="Fichero de cabecera asociado a la biblioteca libimagen.a." alt="" coords="43,80,169,107"/>
+<area shape="rect" id="node4" href="$image_8cpp.html" title="Fichero con definiciones para los métodos primitivos de la clase Image." alt="" coords="151,155,264,181"/>
+<area shape="rect" id="node5" href="$imageIO_8cpp.html" title="Fichero con definiciones para la E/S de imágenes." alt="" coords="245,80,372,107"/>
+<area shape="rect" id="node3" href="$video_8h_source.html" title=" " alt="" coords="5,155,127,181"/>
+</map>

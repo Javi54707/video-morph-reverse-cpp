@@ -1,0 +1,65 @@
+/*! \mainpage Práctica 3: Abstracción. TDA Vídeo
+@image html ./escudo_ugr.png
+
+### F. Javier Ortiz Molinero, Jorge Rodríguez Lechuga
+### 2º DGIIM
+### Estructura de Datos
+
+
+# Introducción
+Esta es una práctica de TDA Imagen y Vídeo
+
+## 1. TDA Imagen
+Una imagen digital de niveles de gris puede verse como una matriz bidimensional de puntos, en la que cada uno tiene asociado un nivel de luminosidad cuyos valores están en el conjunto
+{0,1, ..., 255} de forma que el 0 indica mínima luminosidad, y el 255 la máxima luminosidad.
+@image html ./Esquema_imagen.png
+@image html ./detalle_pixel_vacas.png
+
+## 2. TDA Vídeo 
+Dado una vídeo digital v, definido por ejemplo como:
+Video v;
+las operaciones básicas asociadas son las siguientes:
+1. Creación de un vídeo.
+2. Destrucción de un vídeo.
+3. Consultar el número de fotogramas de un vídeo.
+4. Asignar/consultar una imagen dentro del vídeo
+5. Insertar un nuevo fotograma.
+6. Borrar un fotograma.
+7. Leer un vídeo en disco.
+8. Almacenar un vídeo en disco.
+
+### 2.1. Representación del TDA Vídeo
+Lo haremos a partir de un vector dinámico de objetos de la clase Image.
+@image html ./video.png
+
+### 2.2. Almacenamiento de un vídeo
+Ya que un vídeo lo podemos interpretar como una secuencia de imágenes, almacenar un vídeo en disco significa almacenar los fotogramas que lo forman. Así, cada fotograma lo almacenaremos en  formato PGM. Para saber qué imágenes forman un vídeo, los fotogramas se almacenan en disco con nombres de ficheros que siguen la siguiente nomenclatura:
+prefijo<n>.pgm, donde n es el número de fotograma.
+
+# Ejecutables
+## Rebobinar:
+Programa que, a partir de un vídeo, obtenga el vídeo invertido. Para ello, se debe implementar la función Rebobinar dentro del programa:
+Video Rebobinar (const Video &v);
+
+Esta función tiene como parámetro de entrada un vídeo constante y devolverá un nuevo vídeo que será el vídeo invertido. Esto quiere decir que el fotograma v.size()-1 se podrá en la posición 0 del video rebobinado, el v.size()-2 en la posición 1, y así hasta llegar al fotograma 0 que se colocará en la posición v.size()-1.
+
+Un ejemplo de llamada podría ser el siguiente:
+./bin/rebobinar datos/videos/missa/ datos/videos/reb_missa/
+donde argv[1] es el directorio donde se encuentra el vídeo de entrada, y argv[2] es el directorio donde se guarda el vídeo rebobinado.
+
+## Morphing:
+El morphing se usa para cambiar una imagen en otra o para proporcionar una transición suave de una imagen a otra creando la ilusión de una transformación. El término está tomado de la industria de los efectos especiales. Una forma de hacer un morphing simple es establecer un proceso paraincrementar o decrementar los valores de los píxeles a partir de una imagen fuente hasta que igualen los valores de los correspondientes pixeles en una imagen destino.
+@image html ./morphing.png
+El vídeo v en la posición i-ésima contendrá la imagen que sigue la siguiente fórmula:
+I1* (1-i/nf) + (I2*i)/nf
+
+Para ello se cre la siguienta función Morphing:
+Video morphing (const Image &I1, const &Image &I2, int nf);
+Donde I1 es la primera imagen, I2 es la segunda imagen, y nf es el número total de fotogramas que se desean.
+
+Un ejemplo de llamada sería:
+./bin/morphing datos/imagenes/Pedro.pgm datos/imagenes/Azucena.pgm datos/videos/morph 40
+donde argv[1] corresponde a I1, argv[2] corresponde a I2, ergv[3] es el directorio donde se debe guardar el vídeo generado, y argv[4] son los fotogramas deseados.
+
+
+*/

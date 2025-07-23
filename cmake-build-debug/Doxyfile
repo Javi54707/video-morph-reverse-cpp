@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 1. Imágenes"
+OUTPUT_DIRECTORY       = /home/usuario/Documentos/2/ED/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/usuario/Documentos/2/ED/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//include /home/usuario/Documentos/2/ED/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//src /home/usuario/Documentos/2/ED/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/usuario/Documentos/2/ED/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
+EXTRACT_PRIVATE        = NO
